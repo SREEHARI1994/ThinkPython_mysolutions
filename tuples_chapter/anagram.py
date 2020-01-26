@@ -27,9 +27,18 @@ if __name__ == "__main__":
     word_list=make_word_list()
    
     res_dict=find_anagrams(word_list)
+    #modified commented out code for printing in order of length
+    #for value in res_dict.values():
+    res_list=[]
+    res_list.sort()
     for value in res_dict.values():
         if len(value) > 1:
-            print(len(value),value)
+            res_list.append((len(value),value))
+    res_list.sort()
+    for res in res_list:
+        print(res)
+            
+
 
 
 
