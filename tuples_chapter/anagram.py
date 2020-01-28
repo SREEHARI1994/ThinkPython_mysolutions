@@ -1,9 +1,9 @@
 """
 this is the solution to the excercise on finding anagrams from word list, 
 """
-def make_word_list():
+def make_word_list(file_name):
     words=[]
-    fin=open("words.txt")
+    fin=open(file_name)
     for line in fin:
         words.append(line.strip().lower())
     return words
@@ -44,7 +44,7 @@ def filtered_dict(d,n):
 	return new_dict
 
 if __name__ == "__main__":
-	word_list=make_word_list()
+	word_list=make_word_list("words.txt")
 	res_dict=find_anagrams(word_list)
 	print_anagrams(res_dict)
 	print("Now printing anagrams in order of increasing length\n")
